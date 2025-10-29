@@ -1,0 +1,44 @@
+site_name: "Microbiome Analysis Report (Sample)"
+site_url: https://jonathanturck02.github.io/GI-lab_report
+theme:
+  name: material
+  features:
+    - navigation.footer
+  icon:
+    logo: fontawesome/solid/chart-simple   
+  favicon: assets/favicon.ico
+  palette:
+    # Light Mode (Default)
+    - scheme: default
+      toggle:
+        icon: material/weather-night
+        name: Light mode
+      primary: custom
+      accent: blue grey
+
+    # Dark Mode
+    - scheme: slate
+      toggle:
+        icon: material/weather-sunny
+        name: Dark mode
+      primary: custom
+      accent: blue grey
+markdown_extensions:
+  - admonition
+nav:
+  - Home: index.md
+  - Methods: methods.md
+  - Results:
+      - Alpha Diversity: alpha_div.md
+      - Beta Diversity: beta_div.md
+      - Taxa Summary: taxa_summary.md
+  - Data Export: data.md
+  - Knowledge Base:
+      - 16S vs Shotgun Metagenomics: 16S_vs_shotgun.md
+extra_css:
+  - stylesheets/extra.css
+plugins:
+- with-pdf:
+
+
+

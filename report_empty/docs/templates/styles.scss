@@ -1,0 +1,68 @@
+/* mkdocs-with-pdf custom print styles (SCSS accepted; plain CSS OK) */
+
+/* Page size (change to A4 if needed) */
+/* Slightly narrower margins to give tables more width */
+@page { size: Letter; margin: 16mm 12mm 18mm 12mm; }
+
+/* Stronger, print-scoped overrides to beat theme defaults */
+@media print {
+  :root, html { font-size: 12pt !important; }
+  body { line-height: 1.55 !important; }
+
+  /* Material uses .md-typeset and the plugin sets article to 0.8rem. Override both. */
+  .md-typeset { font-size: 1rem !important; }
+  article { font-size: 1rem !important; line-height: 1.6 !important; }
+
+  /* Headings a bit larger in print */
+  h1 { font-size: 1.9em !important; margin: .6em 0 .3em; }
+  h2 { font-size: 1.6em !important; margin: .75em 0 .35em; }
+  h3 { font-size: 1.3em !important; margin: .8em 0 .4em; }
+
+  /* Ensure code doesn’t overflow */
+  pre, code {
+    font-size: .95em !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+  }
+
+  /* Scale images/figures within page */
+  img, svg, figure { max-width: 100% !important; }
+
+  /* Make Material’s table wrapper behave for print */
+  .md-typeset__table { overflow: visible !important; }
+  .md-typeset__table table { display: table !important; width: 100% !important; }
+
+  /* Tables: fixed layout + wrapped cells to prevent clipping */
+  .md-typeset table,
+  table {
+    width: 100% !important;
+    border-collapse: collapse !important;
+    table-layout: fixed !important;  /* prevents cells from forcing overflow */
+    font-size: 0.85em !important;    /* smaller text inside tables for fit */
+  }
+  /* Increase specificity to beat theme’s padding rules */
+  .md-typeset table th,
+  .md-typeset table td,
+  table th,
+  table td {
+    padding: 4px 6px !important;
+    vertical-align: top !important;
+    word-break: break-word !important;
+    overflow-wrap: anywhere !important;
+    hyphens: auto !important;
+  }
+
+  /* Repeat header rows when a table spans pages */
+  thead { display: table-header-group !important; }
+  tr, thead, tbody { page-break-inside: auto !important; }
+
+  /* Optional: zebra stripes for readability */
+  tbody tr:nth-child(odd) { background: #f6f8fa !important; }
+  tbody tr:nth-child(even) { background: transparent !important; }
+}
+
+/* Optional utility: force a specific table to landscape
+   Use with Markdown attr_list: place `{:.landscape}` above the table */
+@page wide { size: Letter landscape; margin: 15mm; }
+.landscape { page: wide; }

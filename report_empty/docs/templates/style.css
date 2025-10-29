@@ -1,0 +1,55 @@
+/* Page setup (change to A4 if needed) */
+@page { size: Letter; margin: 18mm 16mm 20mm 16mm; }
+
+/* Larger default print text for readability */
+html { font-size: 13pt; }
+body { line-height: 1.5; }
+
+/* Headings scaled up a bit in print */
+h1 { font-size: 1.8em; margin: .6em 0 .3em; }
+h2 { font-size: 1.5em; margin: .75em 0 .35em; }
+h3 { font-size: 1.25em; margin: .8em 0 .4em; }
+
+/* Ensure code blocks don’t overflow pages */
+pre, code {
+  font-size: .92em;
+  white-space: pre-wrap;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+}
+
+/* Scale images/figures within page */
+img, svg, figure { max-width: 100% !important; }
+
+/* Make Material’s table wrapper behave for print */
+.md-typeset__table { overflow: visible !important; }
+.md-typeset__table table { display: table !important; width: 100% !important; }
+
+/* Tables: fixed layout + wrapped cells to prevent clipping */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;        /* prevents cells from forcing overflow */
+  font-size: 0.85em;          /* slightly smaller than body for fit */
+}
+th, td {
+  padding: 6px 8px;
+  vertical-align: top;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
+}
+
+/* Repeat header rows when a table spans pages */
+thead { display: table-header-group; }
+tr, thead, tbody { page-break-inside: auto; }
+
+/* Optional: zebra stripes for readability */
+tbody tr:nth-child(odd) { background: #f6f8fa; }
+tbody tr:nth-child(even) { background: transparent; }
+
+/* Utility: force a specific table to landscape
+   Use with Markdown attr_list: place `{:.landscape}` above the table */
+@page wide { size: Letter landscape; margin: 15mm; }
+.landscape { page: wide; }
+

@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset='utf-8'>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>q2_demux : summarize</title>
+    <link rel="stylesheet" href="./q2templateassets/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./q2templateassets/css/normalize.css"/>
+    <script src="./q2templateassets/js/jquery-3.2.0.min.js" charset="utf-8"></script>
+    <script src="./q2templateassets/js/child.js"></script>
+    
+    
+  </head>
+  <body>
+    <div class="container-fluid">
+        
+
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Demultiplexed sequence counts summary</h1>
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>forward reads</th>
+      <th>reverse reads</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>Minimum</th>
+      <td>227501</td>
+      <td>227501</td>
+    </tr>
+    <tr>
+      <th>Median</th>
+      <td>541220.0</td>
+      <td>541220.0</td>
+    </tr>
+    <tr>
+      <th>Mean</th>
+      <td>497066.5</td>
+      <td>497066.5</td>
+    </tr>
+    <tr>
+      <th>Maximum</th>
+      <td>829455</td>
+      <td>829455</td>
+    </tr>
+    <tr>
+      <th>Total</th>
+      <td>19882660</td>
+      <td>19882660</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+</div>
+
+<div class="row">
+    
+        <div class="col-lg-6">
+            <h3>Forward Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <a href="demultiplex-summary-forward.pdf">
+                        <img src="demultiplex-summary-forward.png">
+                        <p>Download as PDF</p>
+                    </a>
+                
+            </div>
+        </div>
+    
+        <div class="col-lg-6">
+            <h3>Reverse Reads Frequency Histogram</h3>
+            <div class="text-center">
+                
+                    <a href="demultiplex-summary-reverse.pdf">
+                        <img src="demultiplex-summary-reverse.png">
+                        <p>Download as PDF</p>
+                    </a>
+                
+            </div>
+        </div>
+    
+</div>
+
+<div class="row">
+    <div class="col-lg-12">
+        <h1>Per-sample sequence counts</h1>
+        <h4>
+            Total Samples:&nbsp;
+            
+                
+                    40 (forward)&nbsp;
+                
+            
+                
+                    40 (reverse)&nbsp;
+                
+            
+        </h4>
+        <table border="0" class="dataframe table table-striped table-hover">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>forward sequence count</th>
+      <th>reverse sequence count</th>
+    </tr>
+    <tr>
+      <th>sample ID</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>GILAB-001_S297</th>
+      <td>264014</td>
+      <td>264014</td>
+    </tr>
+    <tr>
+      <th>GILAB-002_S298</th>
+      <td>379146</td>
+      <td>379146</td>
+    </tr>
+    <tr>
+      <th>GILAB-003_S299</th>
+      <td>319638</td>
+      <td>319638</td>
+    </tr>
+    <tr>
+      <th>GILAB-004_S300</th>
+      <td>369502</td>
+      <td>369502</td>
+    </tr>
+    <tr>
+      <th>GILAB-005_S301</th>
+      <td>306337</td>
+      <td>306337</td>
+    </tr>
+    <tr>
+      <th>GILAB-006_S302</th>
+      <td>348037</td>
+      <td>348037</td>
+    </tr>
+    <tr>
+      <th>GILAB-007_S303</th>
+      <td>350650</td>
+      <td>350650</td>
+    </tr>
+    <tr>
+      <th>GILAB-008_S304</th>
+      <td>340108</td>
+      <td>340108</td>
+    </tr>
+    <tr>
+      <th>GILAB-009_S305</th>
+      <td>323389</td>
+      <td>323389</td>
+    </tr>
+    <tr>
+      <th>GILAB-010_S306</th>
+      <td>314146</td>
+      <td>314146</td>
+    </tr>
+    <tr>
+      <th>GILAB-011_S307</th>
+      <td>534971</td>
+      <td>534971</td>
+    </tr>
+    <tr>
+      <th>GILAB-012_S308</th>
+      <td>539738</td>
+      <td>539738</td>
+    </tr>
+    <tr>
+      <th>GILAB-013_S309</th>
+      <td>227501</td>
+      <td>227501</td>
+    </tr>
+    <tr>
+      <th>GILAB-014_S310</th>
+      <td>347438</td>
+      <td>347438</td>
+    </tr>
+    <tr>
+      <th>GILAB-015_S311</th>
+      <td>272940</td>
+      <td>272940</td>
+    </tr>
+    <tr>
+      <th>GILAB-016_S312</th>
+      <td>338736</td>
+      <td>338736</td>
+    </tr>
+    <tr>
+      <th>GILAB-017_S313</th>
+      <td>318712</td>
+      <td>318712</td>
+    </tr>
+    <tr>
+      <th>GILAB-018_S314</th>
+      <td>316283</td>
+      <td>316283</td>
+    </tr>
+    <tr>
+      <th>GILAB-019_S315</th>
+      <td>678735</td>
+      <td>678735</td>
+    </tr>
+    <tr>
+      <th>GILAB-020_S316</th>
+      <td>542702</td>
+      <td>542702</td>
+    </tr>
+    <tr>
+      <th>GILAB-021_S317</th>
+      <td>631592</td>
+      <td>631592</td>
+    </tr>
+    <tr>
+      <th>GILAB-022_S318</th>
+      <td>620077</td>
+      <td>620077</td>
+    </tr>
+    <tr>
+      <th>GILAB-023_S319</th>
+      <td>602956</td>
+      <td>602956</td>
+    </tr>
+    <tr>
+      <th>GILAB-024_S320</th>
+      <td>594962</td>
+      <td>594962</td>
+    </tr>
+    <tr>
+      <th>GILAB-025_S321</th>
+      <td>829455</td>
+      <td>829455</td>
+    </tr>
+    <tr>
+      <th>GILAB-026_S322</th>
+      <td>581762</td>
+      <td>581762</td>
+    </tr>
+    <tr>
+      <th>GILAB-027_S323</th>
+      <td>680966</td>
+      <td>680966</td>
+    </tr>
+    <tr>
+      <th>GILAB-028_S324</th>
+      <td>695196</td>
+      <td>695196</td>
+    </tr>
+    <tr>
+      <th>GILAB-029_S325</th>
+      <td>623328</td>
+      <td>623328</td>
+    </tr>
+    <tr>
+      <th>GILAB-030_S326</th>
+      <td>684123</td>
+      <td>684123</td>
+    </tr>
+    <tr>
+      <th>GILAB-031_S327</th>
+      <td>574674</td>
+      <td>574674</td>
+    </tr>
+    <tr>
+      <th>GILAB-032_S328</th>
+      <td>395955</td>
+      <td>395955</td>
+    </tr>
+    <tr>
+      <th>GILAB-033_S329</th>
+      <td>683331</td>
+      <td>683331</td>
+    </tr>
+    <tr>
+      <th>GILAB-034_S330</th>
+      <td>547457</td>
+      <td>547457</td>
+    </tr>
+    <tr>
+      <th>GILAB-035_S331</th>
+      <td>623998</td>
+      <td>623998</td>
+    </tr>
+    <tr>
+      <th>GILAB-036_S332</th>
+      <td>525142</td>
+      <td>525142</td>
+    </tr>
+    <tr>
+      <th>GILAB-037_S333</th>
+      <td>627043</td>
+      <td>627043</td>
+    </tr>
+    <tr>
+      <th>GILAB-038_S334</th>
+      <td>595141</td>
+      <td>595141</td>
+    </tr>
+    <tr>
+      <th>GILAB-039_S335</th>
+      <td>716841</td>
+      <td>716841</td>
+    </tr>
+    <tr>
+      <th>GILAB-040_S336</th>
+      <td>615938</td>
+      <td>615938</td>
+    </tr>
+  </tbody>
+</table>
+        <a href="per-sample-fastq-counts.tsv">Download as TSV</a>
+    </div>
+</div>
+
+    </div>
+    
+    
+  </body>
+</html>
